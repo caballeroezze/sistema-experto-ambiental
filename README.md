@@ -3,12 +3,12 @@
 *Sistema experto basado en reglas para evaluar riesgos ambientales en zonas urbanas mediante análisis de indicadores observables y recomendación de acciones inmediatas.*
 
 ## 1) Descripción
-Este sistema experto permite realizar diagnósticos ambientales a través de un cuestionario interactivo que evalúa 7 indicadores observables y aplica 8 reglas de inferencia para determinar el nivel de riesgo ambiental y proporcionar recomendaciones específicas.
+Este sistema experto permite realizar diagnósticos ambientales a través de un cuestionario interactivo que evalúa 7 indicadores observables y aplica 9 reglas de inferencia para determinar el nivel de riesgo ambiental y proporcionar recomendaciones específicas.
 
 ### Características principales:
 
 **Core del Sistema:**
-* Base de conocimiento con 8 reglas ambientales
+* Base de conocimiento con 9 reglas ambientales
 * Motor de inferencia con encadenamiento hacia adelante
 * Motor de inferencia múltiple (detecta todos los problemas simultáneamente)
 * Explicaciones detalladas con justificaciones
@@ -30,7 +30,7 @@ Este sistema experto permite realizar diagnósticos ambientales a través de un 
 * Consulta de diagnósticos previos
 
 **Calidad y Testing:**
-* 23 tests unitarios con cobertura completa
+* 24 tests unitarios con cobertura completa
 * Tests del motor de inferencia
 * Tests de la base de conocimiento
 * Validación de integridad de reglas
@@ -122,7 +122,7 @@ PROYECTO FINAL - Diagnostico Ambiental/
 ├── modelos.py                      # Modelos Pydantic para validación de datos
 ├── database.py                     # Gestión de base de datos SQLite
 ├── pdf_generator.py                # Generación de reportes PDF
-├── test_motor_inferencia.py       # Tests unitarios (23 tests)
+├── test_motor_inferencia.py       # Tests unitarios (24 tests)
 ├── pytest.ini                      # Configuración de pytest
 ├── diagnosticos_ambientales.db    # Base de datos (generada automáticamente)
 ├── README.md                       # Documentación completa
@@ -191,9 +191,9 @@ pytest test_motor_inferencia.py::TestMotorInferencia -v
 
 ### Cobertura de Tests
 
-El proyecto incluye **23 tests unitarios** organizados en 4 categorías:
+El proyecto incluye **24 tests unitarios** organizados en 4 categorías:
 
-1. **TestMotorInferencia** (8 tests)
+1. **TestMotorInferencia** (9 tests)
    - Tests del motor de inferencia principal
    - Validación de reglas específicas
    - Verificación de estructura de resultados
@@ -213,7 +213,7 @@ El proyecto incluye **23 tests unitarios** organizados en 4 categorías:
    - Validación de prioridades
    - Verificación de combinaciones específicas
 
-**Resultado:** 23/23 tests pasando
+**Resultado:** 24/24 tests pasando
 
 ## 9) Checklist de Verificación
 Antes de presentar o usar el sistema, verifica:
@@ -246,5 +246,5 @@ Antes de presentar o usar el sistema, verifica:
 
 **Testing:**
 - [ ] Todos los tests pasan: `pytest test_motor_inferencia.py -v`
-- [ ] 23/23 tests en verde
+- [ ] 24/24 tests en verde
 

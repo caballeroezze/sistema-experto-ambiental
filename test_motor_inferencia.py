@@ -117,6 +117,24 @@ class TestMotorInferencia:
         assert resultado['riesgo'] == 'MEDIO'
         assert resultado['categoria'] == 'Contaminación Acústica'
     
+    def test_motor_inferencia_vegetacion_deteriorada_con_olor(self):
+        """Debe detectar deterioro ambiental con vegetación deteriorada y olor fuerte"""
+        hechos = {
+            "olor_fuerte": True,
+            "vegetacion_deteriorada": True,
+            "residuos_acumulados": False,
+            "humedad_excesiva": False,
+            "ruido_elevado": False,
+            "aire_contaminado": False,
+            "agua_turbia": False
+        }
+        resultado = motor_inferencia(hechos)
+        
+        assert resultado is not None
+        assert resultado['riesgo'] == 'MEDIO'
+        assert resultado['categoria'] == 'Contaminación Ambiental'
+        assert resultado['id'] == 'R-AMB-08'
+    
     def test_motor_inferencia_no_devuelve_lambda(self):
         """El resultado no debe contener la función lambda 'condicion'"""
         hechos = {

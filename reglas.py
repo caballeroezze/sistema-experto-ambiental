@@ -125,6 +125,23 @@ REGLAS_AMBIENTALES = [
     },
     {
         "id": "R-AMB-08",
+        "titulo": "Deterioro Ambiental con Afectación de Vegetación",
+        "condicion": lambda h: h.get("vegetacion_deteriorada") and h.get("olor_fuerte") and not h.get("residuos_acumulados"),
+        "riesgo": "MEDIO",
+        "categoria": "Contaminación Ambiental",
+        "descripcion": "Deterioro de la vegetación asociado a contaminación ambiental sin evidencia de residuos sólidos.",
+        "acciones": [
+            "Identificar fuentes de contaminación atmosférica",
+            "Realizar análisis de calidad del aire",
+            "Evaluar el estado del suelo",
+            "Implementar barreras vegetales de protección",
+            "Monitorear la salud de la vegetación existente",
+            "Investigar posibles fuentes industriales cercanas"
+        ],
+        "justificacion": "La combinación de vegetación deteriorada y olores indica posible contaminación atmosférica o del suelo que requiere identificación y control de la fuente."
+    },
+    {
+        "id": "R-AMB-09",
         "titulo": "Zona con Condiciones Aceptables",
         "condicion": lambda h: not h.get("olor_fuerte") and not h.get("residuos_acumulados") and not h.get("aire_contaminado") and not h.get("agua_turbia"),
         "riesgo": "BAJO",
