@@ -8,32 +8,32 @@ Este sistema experto permite realizar diagnósticos ambientales a través de un 
 ### Características principales:
 
 **Core del Sistema:**
-* ✅ Base de conocimiento con 8 reglas ambientales
-* ✅ Motor de inferencia con encadenamiento hacia adelante
-* ✅ Motor de inferencia múltiple (detecta todos los problemas simultáneamente)
-* ✅ Explicaciones detalladas con justificaciones
-* ✅ Clasificación de riesgos (ALTO, MEDIO, BAJO)
-* ✅ Recomendaciones de acciones inmediatas
+* Base de conocimiento con 8 reglas ambientales
+* Motor de inferencia con encadenamiento hacia adelante
+* Motor de inferencia múltiple (detecta todos los problemas simultáneamente)
+* Explicaciones detalladas con justificaciones
+* Clasificación de riesgos (ALTO, MEDIO, BAJO)
+* Recomendaciones de acciones inmediatas
 
 **Interfaz y Experiencia:**
-* ✅ Interfaz web moderna y responsive
-* ✅ Cuestionario interactivo paso a paso
-* ✅ Barra de progreso visual
-* ✅ Botón "Anterior" para revisar respuestas
-* ✅ Vista de todos los problemas detectados
+* Interfaz web moderna y responsive
+* Cuestionario interactivo paso a paso
+* Barra de progreso visual
+* Botón "Anterior" para revisar respuestas
+* Vista de todos los problemas detectados
 
 **Persistencia y Reportes:**
-* ✅ Base de datos SQLite para historial
-* ✅ Estadísticas generales de diagnósticos
-* ✅ Exportación a PDF de diagnósticos individuales
-* ✅ Exportación a PDF del historial completo
-* ✅ Consulta de diagnósticos previos
+* Base de datos SQLite para historial
+* Estadísticas generales de diagnósticos
+* Exportación a PDF de diagnósticos individuales
+* Exportación a PDF del historial completo
+* Consulta de diagnósticos previos
 
 **Calidad y Testing:**
-* ✅ 23 tests unitarios con cobertura completa
-* ✅ Tests del motor de inferencia
-* ✅ Tests de la base de conocimiento
-* ✅ Validación de integridad de reglas
+* 23 tests unitarios con cobertura completa
+* Tests del motor de inferencia
+* Tests de la base de conocimiento
+* Validación de integridad de reglas
 
 ## 2) Instalación
 ### Requisitos previos
@@ -72,19 +72,19 @@ O: http://127.0.0.1:8000
 ## 4) Uso del Sistema
 ### Flujo de trabajo
 
-#### 🏠 **Pantalla de Inicio**
+#### **Pantalla de Inicio**
 * Lee la descripción del sistema
 * Haz clic en "Comenzar Diagnóstico →"
 * O haz clic en "Ver Historial de Diagnósticos" para revisar diagnósticos previos
 
-#### 📋 **Cuestionario Interactivo**
+#### **Cuestionario Interactivo**
 * Responde 7 preguntas sobre indicadores ambientales
 * Opciones: SÍ o NO
 * Usa el botón "← Anterior" si necesitas revisar una respuesta
 * La barra de progreso muestra tu avance
 * Puedes usar "Volver al Inicio" para cancelar
 
-#### 📊 **Resultados del Diagnóstico**
+#### **Resultados del Diagnóstico**
 * **Nivel de Riesgo:** ALTO / MEDIO / BAJO (con código de color)
 * **Título del Problema:** Identificación clara del problema
 * **Categoría:** Tipo de problema ambiental
@@ -94,18 +94,18 @@ O: http://127.0.0.1:8000
 * **Resumen de Respuestas:** Todas tus respuestas del cuestionario
 
 **Opciones disponibles:**
-* 🔄 "Nuevo Diagnóstico" - Evaluar otra zona
-* 📄 "Descargar PDF" - Exportar el diagnóstico actual
-* 🔍 "Ver Todos los Problemas" - Ver todas las reglas que se cumplen
-* 📚 "Ver Historial" - Acceder al historial completo
+* "Nuevo Diagnóstico" - Evaluar otra zona
+* "Descargar PDF" - Exportar el diagnóstico actual
+* "Ver Todos los Problemas" - Ver todas las reglas que se cumplen
+* "Ver Historial" - Acceder al historial completo
 
-#### 🔍 **Vista de Múltiples Problemas**
+#### **Vista de Múltiples Problemas**
 * Muestra TODAS las reglas ambientales que se cumplen con los indicadores detectados
 * Ordenadas por prioridad (ALTO → MEDIO → BAJO)
 * Cada problema con sus propias acciones recomendadas
 * Útil para tener una visión completa de la situación
 
-#### 📚 **Historial de Diagnósticos**
+#### **Historial de Diagnósticos**
 * **Estadísticas generales:** Total de diagnósticos, distribución por riesgo y categorías
 * **Lista de diagnósticos previos** con fecha, riesgo y detalles
 * **Detalles expandibles** para cada diagnóstico
@@ -120,11 +120,11 @@ PROYECTO FINAL - Diagnostico Ambiental/
 ├── main.py                         # API FastAPI - Punto de entrada principal
 ├── reglas.py                       # Base de conocimiento + Motores de inferencia
 ├── modelos.py                      # Modelos Pydantic para validación de datos
-├── database.py                     # ⭐ Gestión de base de datos SQLite
-├── pdf_generator.py                # ⭐ Generación de reportes PDF
-├── test_motor_inferencia.py       # ⭐ Tests unitarios (23 tests)
-├── pytest.ini                      # ⭐ Configuración de pytest
-├── diagnosticos_ambientales.db    # ⭐ Base de datos (generada automáticamente)
+├── database.py                     # Gestión de base de datos SQLite
+├── pdf_generator.py                # Generación de reportes PDF
+├── test_motor_inferencia.py       # Tests unitarios (23 tests)
+├── pytest.ini                      # Configuración de pytest
+├── diagnosticos_ambientales.db    # Base de datos (generada automáticamente)
 ├── README.md                       # Documentación completa
 ├── requirements.txt                # Dependencias del proyecto
 │
@@ -139,7 +139,7 @@ PROYECTO FINAL - Diagnostico Ambiental/
         └── style.css              # Estilos modernos y responsive
 ```
 
-⭐ = Nuevas funcionalidades implementadas
+**Nota:** Los archivos marcados con comentarios son parte de las funcionalidades avanzadas implementadas.
 
 ## 6) Tecnologías Utilizadas
 
@@ -213,7 +213,7 @@ El proyecto incluye **23 tests unitarios** organizados en 4 categorías:
    - Validación de prioridades
    - Verificación de combinaciones específicas
 
-**Resultado:** ✅ 23/23 tests pasando
+**Resultado:** 23/23 tests pasando
 
 ## 9) Checklist de Verificación
 Antes de presentar o usar el sistema, verifica:
