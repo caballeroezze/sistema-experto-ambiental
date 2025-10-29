@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resultado - Sistema Experto</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Diagnóstico Final</h1>
+    {% if diagnostico %}
+      <div class="resultado-card riesgo-{{ diagnostico.riesgo.lower() }}">
+        <div class="riesgo-tag">RIESGO {{ diagnostico.riesgo }}</div>
+        <h2>{{ diagnostico.titulo }}</h2>
+        <p><strong>Categoría:</strong> {{ diagnostico.categoria }}</p>
+        <p>{{ diagnostico.descripcion }}</p>
+        <div class="justificacion">
+          <strong>Justificación:</strong> {{ diagnostico.justificacion }}
+        </div>
+        <h3>Acciones Recomendadas:</h3>
+        <ul>
+          {% for accion in diagnostico.acciones %}
+            <li>✓ {{ accion }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% else %}
+      <p>No se encontró un diagnóstico aplicable.</p>
+    {% endif %}
+    <a href="/" class="btn">← Volver al Inicio</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Entornos virtuales
+venv/
+venv_windows/
+.venv/
+env/
+ENV/
+
+# Base de datos SQLite (puedes comentar esta línea si quieres subir la BD)
+*.db
+*.sqlite
+*.sqlite3
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos de logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+.cache/
+
+# PDFs generados (opcional, si no quieres subir PDFs generados)
+# *.pdf
+
+

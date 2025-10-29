@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sistema Experto Ambiental</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container fade-in">
+    <!-- Pantalla de inicio -->
+    <div id="inicio" class="pantalla">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h1>Sistema Experto</h1>
+      <h2>Diagnóstico Ambiental Urbano</h2>
+      <p>Este sistema evaluará los riesgos ambientales en zonas urbanas mediante análisis de indicadores observables y recomendará acciones inmediatas.</p>
+      <button class="btn" id="btn-comenzar">
+        Comenzar Diagnóstico →
+      </button>
+      <button class="btn btn-secondary" id="btn-historial-inicio">
+        Ver Historial de Diagnósticos
+      </button>
+    </div>
+
+    <!-- Cuestionario -->
+    <div id="cuestionario" class="pantalla hidden">
+      <h1>Sistema Experto Ambiental</h1>
+      <p>Evalué riesgos ambientales en zonas urbanas respondiendo unas preguntas.</p>
+      <div class="pregunta-container">
+        <h2 id="pregunta-texto">Cargando pregunta...</h2>
+        <div class="progress-bar">
+          <div id="progreso" class="progress-fill" style="width: 0%"></div>
+        </div>
+        <div class="btn-group">
+          <button class="btn-yes" id="btn-si">SÍ</button>
+          <button class="btn-no" id="btn-no">NO</button>
+        </div>
+      </div>
+      <div class="bottom-controls">
+        <button class="btn btn-secondary btn-small" id="btn-anterior" style="display:none;">← Anterior</button>
+        <button class="btn btn-reset btn-small" id="btn-volver-inicio">Volver al Inicio</button>
+      </div>
+    </div>
+
+    <!-- Resultados -->
+    <div id="resultados" class="pantalla hidden">
+      <h1>Diagnóstico Final</h1>
+      <div id="resultado-contenido"></div>
+      <div class="footer-btns">
+        <button class="btn" id="btn-nuevo">Nuevo Diagnóstico</button>
+        <button class="btn btn-secondary" id="btn-descargar-pdf">📄 Descargar PDF</button>
+        <button class="btn btn-secondary" id="btn-ver-todos-diagnosticos">🔍 Ver Todos los Problemas</button>
+        <button class="btn btn-secondary" id="btn-ver-historial">Ver Historial</button>
+      </div>
+    </div>
+
+    <!-- Diagnósticos Múltiples -->
+    <div id="diagnosticos-multiples" class="pantalla hidden">
+      <h1>Todos los Problemas Detectados</h1>
+      <p class="subtitulo-multiple">Este análisis muestra todas las reglas que se cumplen con los indicadores detectados</p>
+      <div id="diagnosticos-multiples-contenido"></div>
+      <div class="footer-btns">
+        <button class="btn" id="btn-volver-resultado">← Volver al Diagnóstico</button>
+        <button class="btn btn-secondary" id="btn-volver-inicio-multiple">Volver al Inicio</button>
+      </div>
+    </div>
+
+    <!-- Historial -->
+    <div id="historial" class="pantalla hidden">
+      <h1>Historial de Diagnósticos</h1>
+      <div id="estadisticas-container" class="estadisticas-card">
+        <h3>Estadísticas Generales</h3>
+        <div id="estadisticas-contenido">Cargando estadísticas...</div>
+      </div>
+      <div id="historial-contenido">
+        <p>Cargando historial...</p>
+      </div>
+      <div class="footer-btns">
+        <button class="btn btn-secondary" id="btn-descargar-historial-pdf">📄 Descargar Historial (PDF)</button>
+        <button class="btn" id="btn-volver-inicio-historial">Volver al Inicio</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
